@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class = "submission-page">
+    
+    <h3>
+        Registration form for Authors
+    </h3>
+    <br>
+    {% if submitted %}
+        You have been registered
+    {% else %}
+    <form action ="" method =POST>
+        {% csrf_token %}
+
+        {{form.as_p}}
+        <div class = "submission-button">
+            <button type ="submit" class="btn" button style="margin:5px;">Register as Author</button>
+        </div>
+    </form>
+    {% endif %}
+</div>
+
+{% endblock %}

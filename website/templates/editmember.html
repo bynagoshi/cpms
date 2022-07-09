@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class = "edit-page">
+    <h3>
+        Edit Information
+    </h3>
+    <form>
+        <div class = "form-group">
+            <input type = "University" input style = "margin:10px;" class = "form-control" id = "exampleInputUniversity" aria-describedby="universityHelp" placeholder="Enter new University">
+        </div>
+        <div class = "edit-button">
+            <a href = "{% url 'index' %}" class="btn" button style="margin:5px;">Update</a>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

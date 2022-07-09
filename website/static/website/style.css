@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.submitpaper-page h3
+{
+    color:rgb(1, 13, 94);
+}
+
+.submitpaper-page{
+    padding-top:10%;
+    padding-left:20%;
+    padding-right:60%;
+}
+
+
+.about-us{
+    position: relative;
+    left:70%;
+    margin-bottom: 20%;
+    bottom: -200px;
+    transform: translate(-50%, -50%);
+    color:rgb(1, 13, 94);
+}
+.about-us p{
+    color:black;
+}
+
+
+.submission-page{
+    display: grid;
+    justify-content: center;
+    position: relative;
+    bottom:-500px;
+    margin-bottom: 20%;
+    background-color: #f8f9fa;
+    width: 20px;
+    left: 50%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 20%;
+    padding-right: 20%;
+    border-radius: 20px;
+    border: 2px solid rgb(1, 13, 94);
+    transform: translate(-50%, -50%);
+}
+.submission-page h3{
+    color:rgb(1, 13, 94);
+    width:max-content;
+    
+}
+
+.submission-page .form-group{
+    width: max-content;
+    margin:auto;
+}
+.submission-page .submission-button{
+    text-align: center;
+}
+
+
+.reviewer-page h3{
+    color:rgb(1, 13, 94);
+    width:max-content;
+}
+
+.submission-page .form-group{
+    width: max-content;
+    margin:auto;
+}
+.reviewer-page .reviewer-button{
+    text-align: center;
+}
+
+.reviewer-page{
+    display: grid;
+    justify-content: center;
+    position: relative;
+    margin-top: 9%;
+    margin-bottom: 30%;
+    bottom:-500px;
+    background-color: #f8f9fa;
+    width: 20px;
+    left: 50%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 20%;
+    padding-right: 20%;
+    border-radius: 20px;
+    border: 2px solid rgb(1, 13, 94);
+    transform: translate(-50%, -50%);
+}
+
+.container{
+    min-height: 80vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.title h1{
+    color:rgb(1, 13, 94);
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar {
+    padding: 20px 50px;
+    min-height: 80px;  
+}
+
+.title {
+    width: 100%;
+    position: relative;
+    bottom: -130px;
+    margin: 10px;
+    height:100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.title .button{
+    position: relative;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.btn {
+
+    border: 1px solid rgb(1, 13, 94)!important;
+    padding: 10px 40px!important;
+    color: rgb(0, 0, 0)!important;
+    width: 10em!important;
+    text-decoration: none!important;
+}
+
+
+.footer-basic {
+    position: relative;
+    bottom:0;
+    width:100%;
+    padding:35px 0;
+    background-color:#f8f9fa;
+}
+
+h2 {
+    color: rgb(1, 13, 94);
+    position:relative;
+    left: -165px;
+    top: 40px;
+    font-family: 'Merriweather Sans' !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 20px !important;
+    text-transform: uppercase;
+}
+
+.footer-basic .social {
+    text-align:center;
+    padding-bottom:25px;
+}
+  
+.footer-basic .social > a  {
+    font-size:30px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+}
+  
+.footer-basic .social > a:hover {
+    opacity:0.9;
+}
+
+
+.register-form{
+    display: grid;
+    justify-content: center;
+    position: relative;
+    bottom:-400px;
+    margin-bottom: 20%;
+    background-color: #f8f9fa;
+    width: 20px;
+    left: 50%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 20%;
+    padding-right: 20%;
+    border-radius: 20px;
+    border: 2px solid rgb(1, 13, 94);
+    transform: translate(-50%, -50%);
+}
+
+.register-form h1{
+    color:rgb(1, 13, 94);
+}
+
+.login-form{
+    display: grid;
+    justify-content: center;
+    position: relative;
+    bottom:-400px;
+    margin-bottom: 20%;
+    background-color: #f8f9fa;
+    width: 20px;
+    left: 50%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 20%;
+    padding-right: 20%;
+    border-radius: 20px;
+    border: 2px solid rgb(1, 13, 94);
+    transform: translate(-50%, -50%);
+}
+.login-form h1{
+    color:rgb(1, 13, 94);
+    margin: auto;
+    vertical-align: middle;
+    padding-bottom: 20px;
+}
+.fileupload-page h3{
+    color:rgb(1, 13, 94);
+}

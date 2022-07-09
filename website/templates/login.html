@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}      
+
+{% load crispy_forms_tags %}
+<div class="login-form">
+  <h1>Login</h1>
+    <form action="" method="POST">
+      {% csrf_token %}
+      <form>
+        <div class="mb-3">
+          <input type="username" class="form-control" placeholder = "Username" name="username" aria-describedby="usernameHelp">
+        </div>
+        <div class="mb-3">
+          <input type="password" class="form-control" placeholder = "Password" name="password">
+        </div>
+        <div class = "submission-button">
+          <button type ="submit" class="btn" button style="margin:5px;">Login</button>
+        </div>
+      </form>
+    </form>
+  <p class="text-center">Don't have an account? <a href="/register">Create an account</a>.</p>
+</div>
+
+{% endblock %}

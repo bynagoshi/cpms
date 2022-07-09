@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class = "fileupload-page">
+    
+    <h3>
+        Paper Submission
+    </h3>
+    <br>
+    {% if submitted %}
+        Paper uploaded
+    {% else %}
+    <form action ="" method =POST enctype="multipart/form-data">
+        {% csrf_token %}
+
+        {{form.as_p}}
+        <div class = "submission-button">
+            <button type ="submit" class="btn" button style="margin:5px;">Upload Paper</button>
+        </div>
+    </form>
+    {% endif %}
+</div>
+
+{% endblock %}

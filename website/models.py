@@ -1,8 +1,10 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+#Database for website
+
 class Author(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, default=None,primary_key=True)
+    user_ref = models.OneToOneField(User, on_delete=models.CASCADE, default=None,primary_key=True)
     FName = models.CharField(max_length = 50)
     MiddleInitial = models.CharField(max_length=1)
     LName = models.CharField(max_length= 50)
@@ -14,6 +16,8 @@ class Author(models.Model):
     Zipcode = models.CharField(max_length = 10)
     PhoneNumber = models.CharField(max_length = 50)
     Email = models.CharField(max_length = 100)
+
+
 
 CHOICES = (
     ('AnalysisOfAlgorithms','AnalysisOfAlgorithms'),
@@ -68,32 +72,6 @@ class Reviewer(models.Model):
     Topic = models.CharField(max_length = 50, choices=CHOICES, default=None)
     OtherDescription = models.CharField(max_length=50, null=True, default = None, blank = True)
     ReviewsAcknowledged = models.BooleanField(null=True, default=False)
-    def __str__(self):
-        return self.user_ref
-
-class Review(models.Model):
-
-    AppropriatenessOfTopic = models.DecimalField(max_digits = 3, decimal_places = 2)
-    TimelinessOfTopic = models.DecimalField(max_digits = 3, decimal_places = 2)
-    SupportiveEvidence = models.DecimalField(max_digits = 3, decimal_places = 2)
-    TechnicalQuality = models.DecimalField(max_digits = 3, decimal_places = 2)
-    ScopeOfCoverage = models.DecimalField(max_digits = 3, decimal_places = 2)
-    CitationOfPreviousWork = models.DecimalField(max_digits = 3, decimal_places = 2)
-    Originality = models.DecimalField(max_digits = 3, decimal_places = 2)
-    ContentComments = models.DecimalField(max_digits = 3, decimal_places = 2)
-    ClarityOfMainMessage = models.CharField(max_length = 1000)
-    OriganizationOfPaper = models.DecimalField(max_digits = 3, decimal_places = 2)
-    ClarityOfMainMessage = models.DecimalField(max_digits = 3, decimal_places = 2)
-    Mechanics = models.DecimalField(max_digits = 3, decimal_places = 2)
-    WrittenDocumentComments = models.CharField(max_length = 1000)
-    SuitabilityForPresentation = models.DecimalField(max_digits = 3, decimal_places = 2)
-    PotentialInterestInTopic = models.DecimalField(max_digits = 3, decimal_places = 2)
-    PotentialForOralPresentationComments = models.CharField(max_length = 1000)
-    OverallRating = models.DecimalField(max_digits = 3, decimal_places = 2)
-    OverallRatingComments = models.CharField(max_length = 1000)
-    ComfortLevelTopic = models.DecimalField(max_digits = 3, decimal_places = 2)
-    ComfortLevelAcceptability = models.DecimalField(max_digits = 3, decimal_places = 2)
-    Complete = models.BooleanField()
 
 class Paper(models.Model):
     author_ref = models.ForeignKey(Author,null=True,on_delete=models.CASCADE,)
@@ -105,7 +83,31 @@ class Paper(models.Model):
     Topic = models.CharField(max_length = 50, choices=CHOICES, default=None)
     OtherDescription = models.CharField(max_length=50, null=True, default = None, blank = True)
 
-    def __str__(self):
-        return self.Title
+class Review(models.Model):
+    paper_ref = models.ForeignKey(Paper,null=True,on_delete=models.CASCADE)
+    reviewer_ref = models.ForeignKey(Reviewer,null=True,on_delete=models.CASCADE)
+    AppropriatenessOfTopic = models.DecimalField(max_digits = 3, decimal_places = 2)
+    TimelinessOfTopic = models.DecimalField(max_digits = 3, decimal_places = 2)
+    SupportiveEvidence = models.DecimalField(max_digits = 3, decimal_places = 2)
+    TechnicalQuality = models.DecimalField(max_digits = 3, decimal_places = 2)
+    ScopeOfCoverage = models.DecimalField(max_digits = 3, decimal_places = 2)
+    CitationOfPreviousWork = models.DecimalField(max_digits = 3, decimal_places = 2)
+    Originality = models.DecimalField(max_digits = 3, decimal_places = 2)
+    ContentComments = models.TextField()
+    ClarityOfMainMessage = models.DecimalField(max_digits = 3, decimal_places = 2)
+    OrganizationOfPaper = models.DecimalField(max_digits = 3, decimal_places = 2)
+    Mechanics = models.DecimalField(max_digits = 3, decimal_places = 2)
+    WrittenDocumentComments = models.TextField()
+    SuitabilityForPresentation = models.DecimalField(max_digits = 3, decimal_places = 2)
+    PotentialInterestInTopic = models.DecimalField(max_digits = 3, decimal_places = 2)
+    PotentialForOralPresentationComments = models.TextField()
+    OverallRating = models.DecimalField(max_digits = 3, decimal_places = 2)
+    OverallRatingComments = models.TextField()
+    ComfortLevelTopic = models.DecimalField(max_digits = 3, decimal_places = 2)
+    ComfortLevelAcceptability = models.DecimalField(max_digits = 3, decimal_places = 2)
+    Complete = models.BooleanField(null=True, default=True)
+
+
+    
 
 # Create your models here.

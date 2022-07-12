@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class = "reviewerdb-page">
+    <br/><br/>
+    <h1>
+        Reviewer Dashboard
+    </h1>
+    <div class = "db-buttons"> 
+        <a href = "{{file.File.url}}"class="btn" button style="margin:5px;">Download A Paper</a>
+        <a href = "{% url 'reviewersubmit' %}" class="btn" button style="margin:5px;">Submit A Review</a>
+        <a href = "{% url 'revieweredit' %}" class="btn" button style="margin:5px;">Edit Information</a>
+    </div>
+</div>
+
+{% endblock %}

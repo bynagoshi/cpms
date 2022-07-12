@@ -11,5 +11,9 @@ urlpatterns = [
     path('review', views.review, name='review'),
     path('submitpaper', views.submitpaper, name='submitpaper'),
     path('reviewdownload', views.reviewdownload, name='reviewdownload'),
-    path('editmember', views.editmember, name='editmember'),
+    path('reviewerdashboard', views.reviewerdashboard, name='reviewerdashboard'),
+    path('reviewersubmit', views.reviewersubmit, name='reviewersubmit'),
+    path('revieweredit', views.revieweredit, name='revieweredit'),
+    path('authoredit', views.authoredit, name='authoredit'),
+    path('authordashboard', views.authordashboard, name='authordashboard'),
 ]

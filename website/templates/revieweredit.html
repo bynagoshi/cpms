@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class = "revieweredit-page">
+    
+    <h3>
+        Update Reviewer Information
+    </h3>
+    <br>
+    {% if submitted %}
+        Information Updated
+    {% else %}
+    <form action ="" method =POST>
+        {% csrf_token %}
+
+        {{form.as_p}}
+        <div class = "submission-button">
+            <button type ="submit" class="btn" button style="margin:5px;">Update Information</button>
+        </div>
+    </form>
+    {% endif %}
+</div>
+
+{% endblock %}

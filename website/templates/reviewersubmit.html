@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class = "reviewersubmit-page">
+    
+    <h3>
+        Submit Review
+    </h3>
+    <br>
+    {% if submitted %}
+        Review Submitted
+    {% else %}
+    <form action ="" method =POST>
+        {% csrf_token %}
+        {{form.as_p}}
+
+        <div class = "submission-button">
+            <button type ="submit" class="btn" button style="margin:5px;">Submit Review</button>
+        </div>
+    </form>
+    {% endif %}
+</div>
+
+{% endblock %}
